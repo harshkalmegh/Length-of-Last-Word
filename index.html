@@ -17,4 +17,19 @@
    * 4. grab the last element of array and store in variable
    * 5. return the last string length
    **/
+
+  var lengthOfLastWord = function (s) {
+    // debugger;
+    let arr = s.split(" ");
+    for (let i = 1; i <= arr.length; ) {
+      const last = arr[arr.length - i];
+      if (last.length === 0) {
+        i++;
+      } else {
+        return last.length;
+      }
+    }
+    return last.length;
+  };
+  console.log(lengthOfLastWord("   fly me   to   the moon  "));
 </script>
